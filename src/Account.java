@@ -1,20 +1,9 @@
-public class Account {
+public abstract class Account {
     private int balance;
 
+    public abstract void addMoney(int addBalance);
 
-    public Account(int startSum){
-        balance = startSum;
-    }
+    public abstract void delMoney (int cash);
 
-    public void deposit(int depositSum) {
-        this.balance += depositSum;
-    }
-
-    public void takeCash (int cash) {
-        this.balance -= cash;
-    }
-
-    public int getBalance() {
-        return  balance;
-    }
+    public abstract int getBalance();
 }

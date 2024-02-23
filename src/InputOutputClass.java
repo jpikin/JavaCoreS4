@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class InputOutputClass {
 
-
     public static int inputStartBalance() throws IllegalArgumentException{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите стартовый баланс счета: ");
@@ -22,6 +21,7 @@ public class InputOutputClass {
         int deposit = scanner.nextInt();
         if (deposit < 0)
             throw new IllegalArgumentException();
+
         return deposit;
     }
 
@@ -31,6 +31,7 @@ public class InputOutputClass {
         int cash = scanner.nextInt();
         if (cash > balance)
             throw new InsufficientFundsException(balance);
+
         return cash;
     }
 }
